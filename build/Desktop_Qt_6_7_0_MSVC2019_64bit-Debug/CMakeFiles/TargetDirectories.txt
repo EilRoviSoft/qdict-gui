@@ -1,0 +1,8 @@
+C:/eilrovisoft/programming/qt/QDictionaryGui/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/QDictionaryGui.dir
+C:/eilrovisoft/programming/qt/QDictionaryGui/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/edit_cache.dir
+C:/eilrovisoft/programming/qt/QDictionaryGui/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/eilrovisoft/programming/qt/QDictionaryGui/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/list_install_components.dir
+C:/eilrovisoft/programming/qt/QDictionaryGui/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/install.dir
+C:/eilrovisoft/programming/qt/QDictionaryGui/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/install/local.dir
+C:/eilrovisoft/programming/qt/QDictionaryGui/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/QDictionaryGui_autogen_timestamp_deps.dir
+C:/eilrovisoft/programming/qt/QDictionaryGui/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/CMakeFiles/QDictionaryGui_autogen.dir

@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-543079ec7c0a31f95d1b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "QDictionaryGui",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "QDictionaryGui::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QDictionaryGui-Debug-81db576e16b931bba633.json",
+					"name" : "QDictionaryGui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "QDictionaryGui_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QDictionaryGui_autogen-Debug-8b0fb579f66728c8cab8.json",
+					"name" : "QDictionaryGui_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "QDictionaryGui_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QDictionaryGui_autogen_timestamp_deps-Debug-a6a895a0d2dd308b48e3.json",
+					"name" : "QDictionaryGui_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/eilrovisoft/programming/qt/QDictionaryGui/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Debug",
+		"source" : "C:/eilrovisoft/programming/qt/QDictionaryGui"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
