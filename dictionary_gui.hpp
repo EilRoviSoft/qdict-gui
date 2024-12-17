@@ -2,6 +2,10 @@
 
 //qt
 #include <QMainWindow>
+#include <QStandardItemModel>
+
+//dict_gui
+#include "src/database.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -18,6 +22,11 @@ namespace dict_gui {
         ~DictionaryGui() override;
 
     private:
-        Ui::DictionaryGui* ui;
+        Ui::DictionaryGui* _ui;
+        QStandardItemModel _model;
+        Database _db;
+        int _active_row = -1;
+
+        void _init();
     };
 }
