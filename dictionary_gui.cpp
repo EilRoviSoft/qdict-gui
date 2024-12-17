@@ -78,13 +78,6 @@ namespace dict_gui {
 
         _ui->table_view->setModel(&_model);
 
-        init_model_headers(_model, {
-            "English", "Romaji", "Japanese"
-        });
-
-        _ui->table_view->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
-        _ui->table_view->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
-
         connect(_ui->search_button, &QPushButton::released, this, [this] {
             const size_t size = _model.rowCount();
             std::set<int> show_indexes;
@@ -138,6 +131,9 @@ namespace dict_gui {
             }
         });
         connect(_ui->clear_button, &QPushButton::released, this, [this] {
+            _ui->table_view->clearSelection();
+            _active_row = -1;
+
             _ui->line_edit_english->setText("");
             _ui->line_edit_romaji->setText("");
             _ui->line_edit_japanese->setText("");
@@ -169,6 +165,9 @@ namespace dict_gui {
                 return;
 
             _model.removeRow(_active_row);
+
+            _ui->table_view->clearSelection();
+            _active_row = -1;
         });
         connect(_ui->edit_button, &QPushButton::released, this, [this] {
             if (_active_row == -1)
@@ -186,6 +185,11 @@ namespace dict_gui {
             _model.setItem(_active_row, 2, new QStandardItem(japanese));
         });
         connect(_ui->load_button, &QPushButton::released, this, [this] {
+            _model.clear();
+            init_model_headers(_model, {
+                "English", "Romaji", "Japanese"
+            });
+
             _db.load("data.json");
 
             const size_t db_size = _db.size();
@@ -208,6 +212,7 @@ namespace dict_gui {
             }
 
             _db.save("data.json");
+            _db.clear();
         });
 
         connect(_ui->table_view, &QAbstractItemView::clicked, this, [this](const QModelIndex& index) {

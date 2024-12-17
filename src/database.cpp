@@ -7,26 +7,26 @@
 //json
 #include "json.hpp"
 
+nlohmann::json read_json_from_file(const std::string& filename) {
+    std::fstream file(filename, std::fstream::in);
+    if (!file.is_open())
+        throw std::runtime_error("file \'" + filename + "\' is not found");
+
+    nlohmann::json result = nlohmann::json::parse(file);
+    file.close();
+
+    return result;
+}
+void write_json_to_file(const std::string& filename, const nlohmann::json& json) {
+    std::fstream file(filename, std::fstream::out | std::fstream::trunc);
+    if (!file.is_open())
+        throw std::runtime_error("file \'" + filename + "\' is not found");
+
+    file << json;
+    file.close();
+}
+
 namespace dict_gui {
-    nlohmann::json read_json_from_file(const std::string& filename) {
-        std::fstream file(filename, std::fstream::in);
-        if (!file.is_open())
-            throw std::runtime_error("file \'" + filename + "\' is not found");
-
-        nlohmann::json result = nlohmann::json::parse(file);
-        file.close();
-
-        return result;
-    }
-    void write_json_to_file(const std::string& filename, const nlohmann::json& json) {
-        std::fstream file(filename, std::fstream::out | std::fstream::trunc);
-        if (!file.is_open())
-            throw std::runtime_error("file \'" + filename + "\' is not found");
-
-        file << json;
-        file.close();
-    }
-
     int Database::load(const std::string& filename) {
         nlohmann::json data;
 
