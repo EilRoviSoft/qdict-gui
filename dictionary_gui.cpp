@@ -169,21 +169,6 @@ namespace dict_gui {
             _ui->table_view->clearSelection();
             _active_row = -1;
         });
-        connect(_ui->edit_button, &QPushButton::released, this, [this] {
-            if (_active_row == -1)
-                return;
-
-            const auto& english = _ui->line_edit_english->displayText();
-            const auto& romaji = _ui->line_edit_romaji->displayText();
-            const auto& japanese = _ui->line_edit_japanese->displayText();
-
-            if (english == nullptr || romaji == nullptr || japanese == nullptr)
-                return;
-
-            _model.setItem(_active_row, 0, new QStandardItem(english));
-            _model.setItem(_active_row, 1, new QStandardItem(romaji));
-            _model.setItem(_active_row, 2, new QStandardItem(japanese));
-        });
         connect(_ui->load_button, &QPushButton::released, this, [this] {
             _model.clear();
             init_model_headers(_model, {
