@@ -3,8 +3,7 @@
 //std
 #include <memory>
 #include <string>
-#include <list>
-#include <unordered_map>
+#include <vector>
 
 namespace dict_gui {
 	struct record_t {
